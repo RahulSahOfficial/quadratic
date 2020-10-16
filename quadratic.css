@@ -1,50 +1,37 @@
 
-
-/*
-*----------------------------------------------------------------
-* SITE HEADER
-*----------------------------------------------------------------
-*/
-.site-header {
-    background-color: rgba(0, 0, 0, 0.85);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
-  }
-  /*
-  *----------------------------------------------------------------
-  * heading
-  *----------------------------------------------------------------
-  */
   .heading
   {  
-      /* margin-top: 50px; */
       text-align: center;
   }
-  /*
-  *----------------------------------------------------------------
-  * container
-  *----------------------------------------------------------------
-  */
-  .container_wrapper
+  .outerbox
   {
-      width: 90%;
-      height:auto;
-      display: flex;
-      margin: .5rem auto auto;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      color: white;
-      padding: 2rem 0;
+    display: block;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 8rem;
   }
- 
+
+  .herobox
+  {
+    display: flex;
+    background: linear-gradient(90deg, #3F51B5, #2196F3);
+    padding: 2rem 5rem;
+    justify-content: center;
+  }
+  .herotextbox
+  {
+    margin: 0 6rem;
+    color: white;
+  }
 /*quadraticbox*/
 .quadraticbox
 {
+  display: inline-block;
   text-align: center;
   box-shadow: 1px 2px 20px #2828288c;
     padding: 1.5rem;
     border-radius: 1rem;
+    max-width: 30rem;
 }
 .quadeqbox
 {
@@ -84,7 +71,7 @@
 }
 .xcont
 {
-  margin: 0 0.3rem;
+  margin: 1rem;
   display: inline-block;
     min-width: 9rem;
     padding: 0.5rem 0.7rem;
@@ -100,27 +87,6 @@
 .delbtn
 {
   float: right;
-}
-.footer
-{
-        position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: #3c3c3c;
-    padding: 0.7rem;
-    color: white;
-    text-align: center;
-}
-.footer p
-{
-    font-size: 1.1rem;
-    cursor: pointer;
-    font-weight: 300;
-    margin-bottom: 0;
-}
-.outerbox
-{
-  margin: 5rem 0;
 }
 input
 {
@@ -168,73 +134,67 @@ input::-webkit-inner-spin-button {
   padding-left: 0;
 }
 
-  /*list style ends*/
-
-
-
-
-  /*
-*----------------------------------------------------------------
-* HERO SECTION
-*----------------------------------------------------------------
-*/
-.hero-section {
-    background-color: var(--indigo);
-  }
-    
-  .hero-section__graphic,
-  .hero-section__graphic:before,
-  .hero-section__graphic:after {
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 300px;
-    height: 200px;
-    border-radius: 40% 30% 30% 40% / 60% 40% 60% 40%;
-  }
-  
-  .hero-section__graphic:before,
-  .hero-section__graphic:after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    animation: float 10s infinite linear;
-  }
-  .hero-section__graphic:after {
-    animation-direction: reverse;
-    animation-delay: 500ms;
-  }
-  
-  .hero-section__icon {
-    fill: var(--light);
+.footer
+{
+        position: fixed;
+    bottom: 0;
     width: 100%;
-    height: auto;
-  } 
+    background: #3c3c3c;
+    padding: 0.7rem;
+    color: white;
+    text-align: center;
+}
+.footer p
+{
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 300;
+    margin-bottom: 0;
 
-  @keyframes float {
-    0% {
-      transform: translate(0%, 0%) rotate(0);
+}
+
+
+@media only screen and (max-width: 500px){
+    .resultbox
+    {
+      flex-direction: column;
     }
-  
-    33% {
-      transform: translate(2%, 2%) rotate(120deg);
+    .quadraticbox {
+      margin:1rem;
     }
-  
-    66% {
-      transform: translate(2%, -2%) rotate(240deg);
+    .herobox
+    {
+      flex-direction: column;
+    padding: 1rem;
     }
-  
-    to {
-      transform: translate(0%, 0%) rotate(360deg);
+    .heroimgbox
+    {
+      text-align: center;
     }
+    .herotextbox
+    {
+      margin: 1rem;
+    }
+    h1
+    {
+      font-size: 2rem;
+    text-align: center;
+    }
+    .outerbox {
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+.vboxvar {
+    margin: 0 0.2rem
+    }
+    input {
+    width: 3rem;
   }
-
-
-  /* Testing */
-  img {
-    width: 135px;
-    height: 135px;
-     position: relative;
-     left: 83px;
-     top: 30px;
+  .dbox p {
+    font-size: 0.9rem;
   }
+   .footer p
+    {
+        font-size: 1rem;
+    }
+}
